@@ -50,4 +50,9 @@ controls.addEventListener("click", (event) => {
     };
     announcementBox.textContent = playRound(target.id, getComputerChoice());
     scoreboard.textContent = `Human : ${humanScore} | Computer : ${computerScore}`;
+    if (humanScore >= WIN_CONDITION){
+        alert("You Won!");
+    } else if (computerScore >= WIN_CONDITION){
+        alert("You Lost!");
+    };
 })
